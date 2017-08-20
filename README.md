@@ -32,6 +32,7 @@ In order to draw a single line on the left and right lanes, the draw_lines() fun
 * filter out vertical / horizontial lines
 * slope should be < -0.4 for left lane / >0.4 for right lane
 * assume that left lane in left half area of image/ right lane in right half area of image
+
 In addition, in order to reduce the effect of outlier data points during line fitting, instead of start/end point, no. of intermediate data points will be added also based on the length of the line segment.
 
 The following images show how the pipeline works
