@@ -28,8 +28,8 @@ My pipeline consisted of the following steps:
 * Line detection with Hough Transform
 * Draw left and right lane lines. The final step is overlaying the left and right lane lines to original image.
 
-In order to draw a single line on the left and right lanes, The draw_lines() function was modified. Based on detected lane line segments, its slope was used to classify the line segment belong to which, left / right side, lane line. The numpy.polyfit() is used to find the single lane line. In order to better approximation of the line, no. of rules are empolyed to filter out invalid line segments. They are:
-* vertical / horizontial lines
+In order to draw a single line on the left and right lanes, the draw_lines() function was modified. Based on detected lane line segments, its slope was used to classify the line segment belong to which, left / right side, lane line. The numpy.polyfit() is used to find the single lane line. In order to better approximation of the line, no. of rules are empolyed to filter out invalid line segments. They are:
+* filter out vertical / horizontial lines
 * slope should be < -0.4 for left lane / >0.4 for right lane
 * assume that left lane in left half area of image/ right lane in right half area of image
 In addition, in order to reduce the effect of outlier data points during line fitting, instead of start/end point, no. of intermediate data points will be added also based on the length of the line segment.
